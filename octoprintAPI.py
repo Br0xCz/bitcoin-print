@@ -10,3 +10,9 @@ def startPrint(fileName, apiKey, address):
     }
     r = requests.post(url, json=command, headers=headers)
     return r, json.loads(r.text)
+
+def getInfo(address,apiKey):
+    url = 'http://'+address+'/api/printer'
+    headers = {'X-Api-Key': apiKey}
+    r = requests.get(url, headers=headers)
+    return r, json.loads(r.text)

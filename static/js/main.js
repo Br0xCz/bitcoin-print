@@ -8,3 +8,23 @@ $(document).ready(function () {
     });
 
 });
+
+printerStateCallback = function (data) {
+    data = JSON.parse(data);
+    if(data['ready']){
+        
+    }
+    else{
+        
+    }
+};
+
+getPrinterState = function () {
+    $.ajax({
+        type: 'GET',
+        url: '/api/ready',
+        success: printerStateCallback
+    })
+};
+
+interval(1800, getPrinterState());
