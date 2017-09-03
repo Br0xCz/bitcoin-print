@@ -13,7 +13,3 @@ def load_items_settings():
 
 settings = load_settings()
 items = load_items_settings()
-
-print(items['items'])
-for i in items['items']:
-    print(i)
