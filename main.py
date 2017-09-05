@@ -1,3 +1,5 @@
+#!/usr/bin/env python3.6
+
 from flask import Flask,render_template, request
 import jinja2
 import settings
